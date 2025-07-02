@@ -7,13 +7,11 @@ export function Person({ person }) {
     <div className="Person">
       <p className="Person__name">My name is {name}</p>
 
-      {age !== undefined && (
-        <p className="Person__age">I am {age} years old</p>
-      )}
+      {age !== undefined && <p className="Person__age">I am {age}</p>}
 
       {isMarried ? (
         <p className="Person__partner">
-          My {sex === 'm' ? 'wife' : 'husband'} is {partnerName}
+          {partnerName} is my {sex === 'm' ? 'wife' : 'husband'}
         </p>
       ) : (
         <p className="Person__partner">I am not married</p>
